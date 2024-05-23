@@ -1,6 +1,12 @@
+"""
+text@ the user_input text
+dictionary@ this holds much of the everyday english words
+"""
+
+#import the function file
 import functions
 
-text = "Ths is an example of a sentense wth some mispelled words."
+text = "Ths is an example of a sentence wth some mispelled words."
 
 text = input("Input your text: ")
 text = functions.str_check(text)
