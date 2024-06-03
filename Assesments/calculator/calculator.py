@@ -23,7 +23,7 @@ def main():
     """
     the header.functions[op] takes symbol or string andcalls the inteded functions
     """
-    op = functions.functions[op]
+    op = functions.diction[op]
     result = op(num1, num2)
     print(result)
 

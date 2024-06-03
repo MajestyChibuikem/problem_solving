@@ -4,7 +4,7 @@ def float_check(user_input):
             return float(user_input)
             break
         else:
-            print("Incorrect format, Please try again: ")
+            user_input = input("Incorrect format, Please try again: ")
     pass
 
 def convert_to_mile(km):

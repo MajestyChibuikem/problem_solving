@@ -9,7 +9,6 @@ def main():
 
     base = input("Enter the base: ")
     base = functions.int_check(base)
-
     height = input("Enter the height: ")
     height = functions.int_check(height)
 

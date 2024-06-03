@@ -23,6 +23,6 @@ def check_spellings(text, dictionary):
 def str_check(user_input):
     while True:
         if user_input.isdigit():
-            print("Wrong input format, try again: ")
+            user_input = input("Wrong input format, try again: ")
         else:
             return (user_input)

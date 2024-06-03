@@ -1,6 +1,9 @@
 #to import the requests module and allow requests in the script
 import requests
 import json
+#import Assesments.Get_country_info.country_switching_africa as country_switching_africa
+# import Assesments.Get_country_info.country_switching.africa1 as africa1
+import Assesments.Get_country_info.country_switching.africa as africa
 
 #this method loads the api keys from the api file
 def load_api_keys(file_path):
@@ -23,7 +26,6 @@ def int_check(user_input):
         if user_input.isdigit():
             user_input = float(user_input)
             return user_input
-            break
         else:
             print("Incorrect format, Please try again: ")
             user_input = input("Try again: ")
@@ -42,8 +44,8 @@ def str_check(user_input):
 
 # Load API keys from JSON file
 api_keys = load_api_keys("Assesments/Get_country_info/apikey.json")
-url = load_url("Assesments/Get_country_info/details_url.txt")
-# details_url = load_url("Assesments/Get_country_info/details_url.txt")
+# url = load_url("Assesments/Get_country_info/country_urls/country_url.txt")
+# details_url = load_url("Assesments/Get_country_info/country_urls/NG_detailstxt")
 # Extract RapidAPI keys
 rapidapi_keys = api_keys.get("rapidapi",{})
 
@@ -52,9 +54,10 @@ rapidapi_key = rapidapi_keys.get("X-RapidAPI-Key")
 rapidapi_host = rapidapi_keys.get("X-RapidAPI-Host")
 
 def get_country_info(country):
+    #url = africa.switch_country(continent)
+    url = africa.switch_country(country)
     api_url = f"{url}?country={country}"
 
-    querystring = {"namePrefix":"N"}
     headers = {
         "X-RapidAPI-Key": rapidapi_key,
         "X-RapidAPI-Host": rapidapi_host
@@ -65,3 +68,6 @@ def get_country_info(country):
     # response = requests.get(api_url, headers=headers, params=querystring)
 
     print(response.json())
+
+
+

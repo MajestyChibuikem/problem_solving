@@ -13,6 +13,5 @@ def int_check(user_input):
             return user_input
             break
         else:
-            print("Incorrect format, Please try again: ")
             user_input = input("Try again: ")
     pass

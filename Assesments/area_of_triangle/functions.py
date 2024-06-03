@@ -3,9 +3,8 @@ def int_check(user_input):
     while True:
         if user_input.isdigit():
             return float(user_input)
-            break
         else:
-            print("Incorrect format, Please try again: ")
+            user_input = input("Incorrect format, Please try again: ")
     pass
 
 #area calculation

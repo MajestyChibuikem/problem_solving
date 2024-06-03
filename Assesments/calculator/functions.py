@@ -5,14 +5,14 @@ def int_check(user_input):
             return float(user_input)
             break
         else:
-            print("Incorrect format, Please try again: ")
-    pass
+            user_input = input("Incorrect format, Please try again: ")
+            
 
 #checks if the input is a string and loops back if not
 def str_check(user_input):
     while True:
         if user_input.isdigit():
-            print("Wrong input format, try again: ")
+            user_input = input("Wrong input format, try again: ")
         else:
             return (user_input)
 
@@ -44,7 +44,7 @@ def cube(num):
 
 
 #mapping keys to the functions: add, sub, mult, div
-functions = {
+diction = {
     "+" : add,
     "add" : add,
     "-" : sub,

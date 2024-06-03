@@ -9,16 +9,17 @@ def main():
             mile = functions.convert_to_mile(km)
 
             print(f"{km} kilometer is roughly equal to {mile} miles")
+            return False
     
         elif choice == "2":
             mile = input("Enter the mile value: ")
             mile = functions.float_check(mile)
             km = functions.convert_to_km(mile)
             print(f"{mile} miles is roughly equal to {km} kilometer")
+            return False
 
         else:
             choice = input("Invalid input, try again\n1 for kilometer to mile\n2 for mile to kilometer: ")
-
 
 if __name__ == "__main__":
     main()
